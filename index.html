@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume - Prathyush Kumar Reddy Lebaku</title>
-<style>
-    body, h1, h2, p, a { margin: 0; padding: 0; }
-    body { font-family: 'Helvetica Neue', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #f4f4f4; }
-    .container { width: 100%; max-width: 100%; height: 100vh; display: flex; border-radius: 0; box-shadow: none; }
-    .left-column { background: #fff; padding: 40px; width: 50%; }
-    .right-column { background: #ddeedd; padding: 40px; width: 50%; display: flex; align-items: center; justify-content: center; }
-    .profile-image { width: 50%; } /* Adjusted for image */
-    .name { font-size: 2.5em; font-weight: bold; }
-    .title { font-size: 1.5em; margin-bottom: 20px; }
-    .contact-info { margin-bottom: 40px; }
-    .contact-info p { font-size: 1em; margin-bottom: 10px; }
-    .contact-info a { color: #333; text-decoration: none; }
-    .contact-info a:hover { text-decoration: underline; }
-    .resume-link { display: inline-block; margin-top: 20px; padding: 10px 15px; border: 1px solid #333; border-radius: 5px; text-decoration: none; font-weight: bold; color: #333; }
-    .resume-link:hover { background: #333; color: #fff; }
-    .right-column img {
-    width: 90%; /* Make the image fully occupy the width of its parent container */
-    height: auto; /* Maintain the aspect ratio of the image */
-    max-height: 90%;}
-    .poll { margin-top: 20px; }
-    .submit-btn { padding: 10px 20px; background: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Modern Login Page | AsmrProg</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="left-column">
-            <div class="name">Prathyush Kumar Reddy Lebaku</div>
-            <div class="title"></div>
-            <div class="contact-info">
-                <p>Phone: 7138731975</p>
-                <p>Email: plebaku@cougarnet.uh.edu</p>
-                <p>Address: 8181, fannin st, Houston, Texas, 77054</p>
-                <p>
-                    <a href="https://www.linkedin.com/in/lebaku-prathyush-kumar-reddy-83a901202">linkedin profile</a> · 
-                    <a href="#">Facebook</a> · 
-                    <a href="#">Twitter</a>
-                </p>
-                <a href="https://drive.google.com/file/d/1MN8f23QeeVKAUAS_ultCmeojdqrInPeY/view?usp=sharing" class="resume-link" download>Download Resume</a>
-            </div>
-            <!-- Poll Section -->
-            <form action="#" method="post">
-                <div class="poll">
-                    <p>How did you find my resume?</p>
-                    <input type="radio" id="linkedin" name="resume-source" value="LinkedIn">
-                    <label for="linkedin">LinkedIn</label><br>
-                    <input type="radio" id="google" name="resume-source" value="Google">
-                    <label for="google">Google</label><br>
-                    <input type="radio" id="other" name="resume-source" value="Other">
-                    <label for="other">Other</label>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <div class="poll">
-                    <p>Are you interested in collaborating?</p>
-                    <input type="radio" id="yes" name="collaborate" value="Yes">
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" id="no" name="collaborate" value="No">
-                    <label for="no">No</label><br>
-                    <input type="radio" id="maybe" name="collaborate" value="Maybe">
-                    <label for="maybe">Maybe</label>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
+                <span>or use your email for registeration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Sign Up</button>
             </form>
         </div>
-        <div class="right-column">
-            <a href="https://lh3.googleusercontent.com/drive-viewer/AKGpihZzVVtTGDFSqNclgXzLMTMULbpNn_QBVYchKLG71DFMcBwH_o9qUoR6R8I42MjvcXQKJR6p-QC3KvvhIIq-Jck37DbxQcxJbLA=s1600-rw-v1">
-            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZzVVtTGDFSqNclgXzLMTMULbpNn_QBVYchKLG71DFMcBwH_o9qUoR6R8I42MjvcXQKJR6p-QC3KvvhIIq-Jck37DbxQcxJbLA=s1600-rw-v1" />
-            </a>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Forget Your Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
