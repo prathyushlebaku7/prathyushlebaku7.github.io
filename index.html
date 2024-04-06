@@ -10,7 +10,7 @@
     .container { width: 100%; max-width: 100%; height: 100vh; display: flex; border-radius: 0; box-shadow: none; }
     .left-column { background: #fff; padding: 40px; width: 50%; }
     .right-column { background: #ddeedd; padding: 40px; width: 50%; display: flex; align-items: center; justify-content: center; }
-    .profile-video { width: 50%; } /* Removed border-radius for a square shape */
+    .profile-image { width: 50%; } /* Adjusted for image */
     .name { font-size: 2.5em; font-weight: bold; }
     .title { font-size: 1.5em; margin-bottom: 20px; }
     .contact-info { margin-bottom: 40px; }
@@ -19,6 +19,10 @@
     .contact-info a:hover { text-decoration: underline; }
     .resume-link { display: inline-block; margin-top: 20px; padding: 10px 15px; border: 1px solid #333; border-radius: 5px; text-decoration: none; font-weight: bold; color: #333; }
     .resume-link:hover { background: #333; color: #fff; }
+    .right-column img {
+    width: 90%; /* Make the image fully occupy the width of its parent container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    max-height: 90%;}
 </style>
 </head>
 <body>
@@ -39,11 +43,10 @@
             </div>
         </div>
         <div class="right-column">
-            <video controls loop class="profile-video">
-                <source src="https://drive.google.com/uc?export=download&id=1niG6CSh22tqlTgOhRa9rdw-mrcyTKlP5" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-       </div>
+       <a href="https://lh3.googleusercontent.com/drive-viewer/AKGpihZzVVtTGDFSqNclgXzLMTMULbpNn_QBVYchKLG71DFMcBwH_o9qUoR6R8I42MjvcXQKJR6p-QC3KvvhIIq-Jck37DbxQcxJbLA=s1600-rw-v1">
+       <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZzVVtTGDFSqNclgXzLMTMULbpNn_QBVYchKLG71DFMcBwH_o9qUoR6R8I42MjvcXQKJR6p-QC3KvvhIIq-Jck37DbxQcxJbLA=s1600-rw-v1" />
+       </a>
+</div>
     </div>
 </body>
 </html>
