@@ -23,6 +23,8 @@
     width: 90%; /* Make the image fully occupy the width of its parent container */
     height: auto; /* Maintain the aspect ratio of the image */
     max-height: 90%;}
+    .poll { margin-top: 20px; }
+    .submit-btn { padding: 10px 20px; background: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; }
 </style>
 </head>
 <body>
@@ -41,12 +43,34 @@
                 </p>
                 <a href="https://drive.google.com/file/d/1RgYBR0jBjDnLYYKmJrdQhOzp_TPVwir2/view?usp=drive_link" class="resume-link" download>Download Resume</a>
             </div>
+            <!-- Poll Section -->
+            <form action="#" method="post">
+                <div class="poll">
+                    <p>How did you find my resume?</p>
+                    <input type="radio" id="linkedin" name="resume-source" value="LinkedIn">
+                    <label for="linkedin">LinkedIn</label><br>
+                    <input type="radio" id="google" name="resume-source" value="Google">
+                    <label for="google">Google</label><br>
+                    <input type="radio" id="other" name="resume-source" value="Other">
+                    <label for="other">Other</label>
+                </div>
+                <div class="poll">
+                    <p>Are you interested in collaborating?</p>
+                    <input type="radio" id="yes" name="collaborate" value="Yes">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" name="collaborate" value="No">
+                    <label for="no">No</label><br>
+                    <input type="radio" id="maybe" name="collaborate" value="Maybe">
+                    <label for="maybe">Maybe</label>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
         </div>
         <div class="right-column">
-       <a href="https://lh3.googleusercontent.com/drive-viewer/AKGpihZzVVtTGDFSqNclgXzLMTMULbpNn_QBVYchKLG71DFMcBwH_o9qUoR6R8I42MjvcXQKJR6p-QC3KvvhIIq-Jck37DbxQcxJbLA=s1600-rw-v1">
-       <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZzVVtTGDFSqNclgXzLMTMULbpNn_QBVYchKLG71DFMcBwH_o9qUoR6R8I42MjvcXQKJR6p-QC3KvvhIIq-Jck37DbxQcxJbLA=s1600-rw-v1" />
-       </a>
-</div>
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AKGpihZzVVtTGDFSqNclgXzLMTMULbpNn_QBVYchKLG71DFMcBwH_o9qUoR6R8I42MjvcXQKJR6p-QC3KvvhIIq-Jck37DbxQcxJbLA=s1600-rw-v1">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZzVVtTGDFSqNclgXzLMTMULbpNn_QBVYchKLG71DFMcBwH_o9qUoR6R8I42MjvcXQKJR6p-QC3KvvhIIq-Jck37DbxQcxJbLA=s1600-rw-v1" />
+            </a>
+        </div>
     </div>
 </body>
 </html>
