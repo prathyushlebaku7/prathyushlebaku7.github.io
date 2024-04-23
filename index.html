@@ -3,61 +3,668 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Modern Login Page | AsmrProg</title>
+    <title>CyberCare Symposium 2024</title>
+    <style>
+    .call-for-papers-button,
+.submit-poster-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #C8102E; /* Same color as the research banner */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Spacing between the key dates and button */
+}
+
+.call-for-papers-button:hover,
+.submit-poster-button:hover {
+    background-color: #A00F1E; /* Darker shade on hover */
+}
+     .university-header {
+    background-color: #C8102E;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.university-logo {
+    height: 45px;
+}
+
+.university-header {
+    background-color: #C8102E;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.university-header .uh-cybercare-link a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.university-header .uh-cybercare-link a:hover {
+    text-decoration: underline;
+}
+
+.symposium-title h1 {
+    background-color: #888B8D;
+    color: white;
+    text-align: center;
+    font-size: 2.2em;
+    padding: 20px 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.symposium-banner {
+    position: relative;
+}
+
+.symposium-image {
+    width: 100%;
+    display: block;
+}
+
+.research-banner {
+    position: absolute;
+    bottom: 20mm;
+    left: 0;
+    right: 0;
+    background-color: #C8102E;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.research-banner h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.3;
+    font-family: 'Merriweather', serif;
+    color: white;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            background: white;
+            margin: 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+#overview {
+    background-color: #f8f9fa; /* Light background for subtle contrast */
+    padding: 20px; /* Consistent padding for spacing */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    margin: 10px 20px; /* Standard margin for layout consistency */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-size: 1.1em; /* Standard font size for readability */
+    line-height: 1.6; /* Line height for comfortable reading */
+    color: #333; /* Dark grey for readable text */
+    border-left: 6px solid #C8102E; 
+}
+
+#overview h2 {
+    color: #C8102E; /* Matching the border color for consistency */
+    font-family: 'Merriweather', serif; /* Serif font for a formal look */
+    margin-bottom: 16px; /* Space below the heading */
+}
+
+#overview p {
+    text-align: justify; /* Justified text for a clean, aligned look */
+    padding-bottom: 10px; /* Padding at the bottom for separation from any following content */
+}
+
+@media (max-width: 768px) {
+    #overview {
+        margin: 10px; /* Smaller margin for mobile to use space efficiently */
+        padding: 15px; /* Slightly less padding on smaller screens */
+    }
+}
+.call-for-presentations {
+    background-color: #f8f9fa; /* Light background for subtle contrast */
+    padding: 20px; /* Consistent padding for spacing */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    margin: 10px 20px; /* Standard margin for layout consistency */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-size: 1.1em; /* Standard font size for readability */
+    line-height: 1.6; /* Line height for comfortable reading */
+    color: #333; /* Dark grey for readable text */
+    border-left: 6px solid #C8102E; 
+}
+
+.call-for-presentations h2 {
+    color: #C8102E; /* Brand color for headings */
+    font-family: 'Merriweather', serif; /* Consistency with other headings */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.call-for-presentations p {
+    text-align: justify; /* Justified text for a neat appearance */
+    margin-bottom: 10px; /* Space before the next section */
+}
+
+.call-for-presentations .key-dates {
+    background-color: #e9ecef; /* Slightly darker background for this sub-section */
+    border-left: 4px solid #C8102E; /* Left border for visual importance */
+    padding: 10px 15px; /* Padding inside the key dates box */
+    margin-top: 10px; /* Margin above for separation */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.call-for-presentations .key-dates strong {
+    font-size: 1.2em; /* Larger font size for emphasis */
+    color: #333; /* Dark color for contrast */
+}
+
+.call-for-presentations .key-dates ul {
+    list-style-type: none; /* No bullets to keep it clean */
+    padding: 0; /* No padding to align with the text */
+}
+
+.call-for-presentations .key-dates li {
+    margin-bottom: 5px; /* Space between items for clarity */
+    padding-left: 20px; /* Indent text for hierarchy */
+    position: relative; /* Needed for custom bullet */
+}
+
+.call-for-presentations .key-dates li::before {
+    content: '•'; /* Custom bullet */
+    color: #C8102E; /* Bullet color matches the theme */
+    position: absolute; /* Positioning relative to the li */
+    left: 0; /* Align to the left */
+    font-size: 1.5em; /* Larger bullet size */
+    line-height: 0.5; /* Adjust line height to match list item */
+    top: -2px; /* Adjust top position to vertically align */
+}
+
+@media (max-width: 768px) {
+    .call-for-presentations {
+        margin: 10px; /* Reduced margin for smaller screens */
+        padding: 15px; /* Slightly smaller padding on smaller devices */
+    }
+}
+#poster {
+    background-color: #fff; /* White background for clear readability */
+    padding: 20px; /* Adequate padding for content */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    margin: 10px 20px; /* Margin to maintain consistency in layout */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    color: #333; /* Dark grey for text for better readability */
+    border-left: 6px solid #C8102E;
+     font-size: 1.1em;
+}
+
+#poster h2 {
+    color: #C8102E; /* Brand color to maintain theme consistency */
+    font-family: 'Merriweather', serif; /* Serif font for a formal touch */
+    margin-bottom: 15px; /* Space below the heading to separate from text */
+}
+
+#poster p {
+    text-align: left; /* Align text to the left for standard reading flow */
+    margin-bottom: 10px; /* Margin below paragraphs for clear sectioning */
+    line-height: 1.6; /* Line height for readability */
+}
+
+#poster p strong {
+    font-weight: bold; /* Emphasize strong tag more by making it bolder */
+    color: #121212; /* Dark blue for highlighting important aspects */
+}
+
+#poster p br {
+    margin-bottom: 5px; /* Space after breaks for better paragraph separation */
+}
+
+@media (max-width: 768px) {
+    #poster {
+        margin: 10px; /* Smaller margins for mobile devices */
+        padding: 15px; /* Adjust padding to fit smaller screens */
+    }
+}
+#poster {
+    background-color: #f9f9f9; /* Subtle background color for distinction */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    margin: 20px; /* Adds space around the section */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to lift the section off the page */
+    font-family: Arial, sans-serif; /* Consistent font family */
+    color: #333; /* Readable text color */
+}
+
+#poster h1, #poster h4 {
+    color: #C8102E; /* A strong color for headings */
+    font-family: 'Merriweather', serif;
+    text-align: justify; /* Serif font for importance and readability */
+}
+
+#poster h1 {
+    margin-bottom: 15px; /* Space below the main title */
+}
+
+#poster h4 {
+    margin-bottom: 10px; /* Smaller margin for subheading to keep it close to the content it introduces */
+}
+
+#poster p {
+    text-align: justify; /* Justified text for a polished look */
+    padding: 0 10px; /* Padding on sides for text block */
+    margin-bottom: 15px; /* Spacing below the paragraph for separation */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+#poster .key-dates {
+    background-color: #e7f3fe; /* Light blue background for key dates section */
+    border-left: 4px solid #0056b3; /* Solid left border for emphasis */
+    padding: 10px 20px; /* Padding for visual space inside the box */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Vertical margin for separation */
+}
+
+#poster .key-dates ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+}
+
+#poster .key-dates li {
+    padding-left: 10px; /* Padding for list items */
+    position: relative; /* Needed for custom styling */
+    margin-bottom: 5px; /* Margin between items */
+}
+
+#poster .key-dates li:before {
+    content: "•"; /* Custom bullet */
+    color: #0056b3; /* Bullet color */
+    position: absolute; /* Absolute positioning inside the li */
+    left: 0; /* Align bullets to the edge */
+    top: 0; /* Align bullets to the top */
+    font-size: 1.2em; /* Larger font size for visibility */
+}
+
+#poster .call-for-papers-container {
+    text-align: center; /* Centers the button */
+    margin-top: 20px; /* Space above the button */
+}
+
+#poster .call-for-papers-button {
+    font-size: 1.2em; /* Slightly larger font size */
+    padding: 10px 25px; /* Generous padding for a clickable area */
+    background-color: #C8102E;/* Bright blue for visibility */
+    color: white; /* White text for contrast */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#poster .call-for-papers-button:hover {
+    background-color: #0056b3; /* Darker shade on hover for interaction feedback */
+}
+
+
+
+#dates {
+    background-color: #ffffff; /* White background for maximum readability */
+    padding: 20px; /* Adequate padding around the content */
+    margin: 20px auto; /* Centered horizontally with some margin for clarity */
+    width: 80%; /* Appropriate width, not too wide */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a slight depth effect */
+    font-family: 'Arial', sans-serif; /* Clean and readable font */
+    
+}
+
+#dates h2 {
+    color: #333; /* Dark color for contrast and emphasis */
+    text-align: center; /* Center-align the title for balance */
+    margin-bottom: 15px; /* Space below the title to separate from content */
+}
+
+#dates ul {
+    list-style-type: none; /* Remove default bullet points for cleanliness */
+    padding: 0; /* Reset padding to allow full control */
+    margin: 0; /* Reset margin to allow full control */
+    text-align: left; /* Aligns text to the left */
+}
+
+#dates li {
+    background-color: #f9f9f9; /* Slightly off-white background for each list item */
+    margin-bottom: 10px; /* Space between list items */
+    padding: 10px 15px; /* Padding inside each list item for spacing */
+    border-left: 5px solid #c8102e; /* A red accent line for visual interest */
+    font-size: 1em; /* Suitable font size for readability */
+}
+
+#dates li:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last item to maintain uniform spacing */
+}
+.agenda-section {
+    background-color: #ffffff; /* White background for clarity */
+    padding: 20px; /* Adequate padding for spacing */
+    margin: 20px; /* Margins for layout separation */
+    border-radius: 8px; /* Rounded corners for a modern feel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Arial', sans-serif; /* Clean, readable font */
+    border-left: 6px solid #C8102E;
+}
+
+.agenda-heading {
+    color: #C8102E; /* Dark red for emphasis and theme consistency */
+    text-align: center; /* Center alignment for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.agenda-item {
+    border-bottom: 1px solid #eee; /* Light grey border for subtle separation */
+    padding: 10px 0; /* Padding for spacing within items */
+    display: flex; /* Flex display for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between time and event */
+}
+
+.agenda-item:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+.agenda-time {
+    font-size: 0.9em; /* Smaller font size for time */
+    font-weight: bold; /* Bold font weight for emphasis */
+    color: #333; /* Dark grey for readability */
+    width: 20%; /* Width allocation for time block */
+    text-align: left; /* Align text to the left */
+}
+
+.agenda-event {
+    font-size: 1em; /* Standard font size for events */
+    color: #555; /* Medium grey for readability */
+    width: 80%; /* Width allocation for event description */
+    text-align: left; /* Align text to the left */
+}
+
+@media (max-width: 768px) {
+    .agenda-item {
+        flex-direction: column; /* Stack time and event vertically on small screens */
+        text-align: center; /* Center alignment for better mobile readability */
+    }
+
+    .agenda-time, .agenda-event {
+        width: 100%; /* Full width for mobile responsiveness */
+    }
+}
+
+.symposium-agenda {
+    background-color: #f8f9fa; /* Light background for subtle contrast */
+    padding: 20px; /* Consistent padding for spacing */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    margin: 10px 20px; /* Standard margin for layout consistency */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-size: 1.1em; /* Standard font size for readability */
+    line-height: 1.6; /* Line height for comfortable reading */
+    color: #333; /* Dark grey for readable text */
+    border-left: 6px solid #C8102E; 
+
+.symposium-agenda h2, .agenda-day h3 {
+    color: #c8102e; /* Red color for the heading to match the border */
+    margin-bottom: 10px; /* Space below the heading */
+    font-weight: bold; /* Bold font weight for the heading */
+}
+
+.symposium-agenda p {
+    font-size: 1em; /* Standard font size for the text */
+    color: #333; /* Dark grey color for readability */
+    line-height: 1.5; /* Line height for better readability */
+    margin-bottom: 10px; /* Space between paragraphs */
+    padding-left: 20px; /* Indent the paragraphs to align with the heading */
+}
+
+.symposium-agenda p:before {
+    content: "• "; /* Bullet point before each paragraph */
+    color: #333; /* Color for the bullet */
+    padding-right: 10px; /* Space after the bullet */
+}
+
+.symposium-agenda .agenda-day {
+    border-bottom: 1px solid #eee; /* Separator between days */
+    padding-bottom: 10px; /* Spacing at the bottom of each day's section */
+}
+
+.symposium-agenda .agenda-day:last-child {
+    border-bottom: none; /* No border for the last day */
+}
+
+
+
+    </style>
 </head>
 <body>
-
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form action="connect.php" method="post">
-                <h1>Create Account</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in">
-            <form action="welcome.html" method="post">
-                <h1>Sign In</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="hidden" id="login">Sign In</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="hidden" id="register">Sign Up</button>
-                </div>
-            </div>
-        </div>
+   <header class="university-header">
+    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZ2pt3pbL4qENdBJBvaICWfkHbDTp-6OXs9dTZpTtiYGmtuCNZvj-1n_LF9zbHmFBihZjGWgBpV1n2FBogEEuO4bVAdzfg8-iE=s2560" alt="University Logo" class="university-logo">
+    <div class="uh-cybercare-link">
+      <a href="https://www.uh.edu/cybercare/" target="_blank">Visit UH Cyber-Care</a>
+      <a href="https://www.hilton.com/en/hotels/houuhhf-hilton-university-of-houston/" style="color: white;">Book Your Hotel Room</a>
     </div>
+</header>
 
-    <script src="script.js"></script>
+  
+    <div class="symposium-title">
+        <h1>Safeguarding Transportation Cybersecurity in the Digital Age</h1>
+    </div>
+    <section class="symposium-banner">
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbKtw_zg2o1QH7Nlnm_A85x6NdbbvG6Z-Xe3c-UYmaZ4Empi8Rz-7MEfATr1WT9ff1jf1Git4FJKjasGxRF95zIgP7fGAwoZb0=s1600-rw-v1" alt="Symposium Banner" class="symposium-image">
+        <div class="research-banner">
+            <h2>United States Department of Transportation University Research Center-Symposium</h2>
+        </div>
+    </section>
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#poster">Presentations</a>
+        <a href="#key-dates">Key Dates</a>
+        <a href="">Contact</a>
+    </nav>
+    <section id="overview">
+        <h2>CyberCare Symposium 2024</h2>
+        <p>On behalf of the United States Department of Transportation University Research Center, we are pleased to announce that the 2024 Symposium on CyberCare will be held from October 17th (Thursday) to October 19th (Saturday), 2024, at the Student Center South, University of Houston, TX.The theme of the symposium is “Safeguarding Transportation Cybersecurity in the Digital Age.” The main objective of the symposium is to provide a forum for professionals to discuss and address the pressing needs of cybersecurity, connected and automated vehicles (CAV), AI applications, transportation data security, advanced traffic management systems (ATMS), next-gen transportation cybersecurity, and how digital and AI technologies are revolutionizing transportation.
+<br><br>The symposium will also serve as a collaborative space to develop strategies for protecting data integrity, ensuring the robustness of AI systems in unpredictable conditions, and fostering sustainable innovation within the digital transportation framework.
+</p>
+    </section>
+    <section class="call-for-presentations">
+        <h2>Call for Presentations</h2>
+        <p>We are now accepting abstracts for presentations at the symposium on Safeguarding Transportation Cybersecurity in the Digital Age-related topics  with a focus on Threat Landscape Analysis, Vulnerability Assessments, Incident Response Plans. If you are interested in making a presentation at the annual symposium, please submit your one-page abstract via the link on the right.</p>
+    </section>
+    <section id="poster">
+        <h2>Poster Session and Student Competition</h2>
+        <p>This year's symposium also features a Poster Competition aimed at engaging students and young professionals in the field of CyberCare. This is an excellent opportunity for emerging experts to showcase their research and innovative solutions.</p>
+         <p><strong>Eligibility and Guidelines for Poster Competition:</strong> <br> 
+Open to full-time students and young professionals.<br>
+Participants may submit one abstract as the lead author.<br>
+Posters must include the Symposium logo and may also feature your university's and funding agency's logos.<br>
+Participants must present their work at the symposium, highlighting their original research and creative approach.</p>
+
+    </section>
+    
+    <section id="poster">
+        <h1>Submission Instructions for Both Presentations and Posters</h1>
+        <p><strong>Key Topics</strong>
+        <p>Cybersecurity in Transportation <br>
+Connected and Automated Vehicles (CAV) <br>
+AI Applications in Transportation<br>
+Transportation Data Security<br>
+Advanced Traffic Management Systems (ATMS)<br>
+Next-Gen Transportation Cybersecurity<br>
+Intelligent Transportation Systems (ITS)<br>
+Digital and AI Technology Impacts<br>
+</p>
+<div class="key-dates">
+            <strong>Key Dates</strong>
+            <ul>
+                <p>Abstract Submission Deadline: August 20th, 2024</p>
+                <p>Notification of Acceptance Date: September 5th, 2024</p>
+                <p>Registration Deadline for Accepted Abstracts: September 20th, 2024</p>
+            </ul>
+        </div>
+
+<div class="call-for-papers-container">
+            <a href="https://forms.gle/KpqDnZZa6xKXSvY9A" class="call-for-papers-button" target="_blank">CALL FOR ABSTRACTS</a>
+        </div>
+
+    </section>
+    <section id="poster">
+        <h2>Awards and Recognition</h2>
+        <p>Submissions will be reviewed for their innovation, technical content, and relevance to the theme. Awards will be given for outstanding contributions to the field of transportation cybersecurity, including a "Best Poster Award" for the most compelling poster presentation.
+<br><br>This symposium provides a platform for both seasoned professionals and upcoming talents to contribute to vital discussions on transportation cybersecurity. Join us in shaping the future of secure, intelligent transportation systems in the digital age.
+</p>
+         
+
+    </section>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symposium Agenda</title>
+    <style>
+        .symposium-agenda {
+            background-color: #f8f9fa; /* Light background for subtle contrast */
+            padding: 20px; /* Consistent padding for spacing */
+            margin: 10px 20px; /* Standard margin for layout consistency */
+            margin-bottom: 30px; /* Adds extra space below the section */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            border-left: 6px solid #C8102E; /* Visual accent on the left */
+            font-size: 1.1em; /* Standard font size for readability */
+            line-height: 1.6; /* Line height for comfortable reading */
+        }
+    </style>
+</head>
+<body>
+ <section class="symposium-agenda">
+    <h2>Symposium Agenda</h2>
+    <div class="agenda-day">
+        <h3>Day 1: Thursday, October 17, 2024</h3>
+        <p>6:30 PM – Kick off the symposium with a welcome reception in the evening, allowing participants to meet and greet in a relaxed setting</p>
+    </div>
+    <div class="agenda-day">
+    <h3>Day 2: Friday, October 18, 2024</h3>
+    <div class="agenda-item">
+        <span class="agenda-time">7:45 – 8:15 AM</span>  <span class="agenda-event">Breakfast</span>
+    </div>
+    <div class="agenda-item">
+        <span class="agenda-time">8:15 – 8:30 AM</span>  <span class="agenda-event">Welcome Remarks</span>
+    </div>
+    <div class="agenda-item">
+        <span class="agenda-time">8:30 – 10:30 AM</span>  <span class="agenda-event">Keynote Panel</span>
+    </div>
+    <div class="agenda-item">
+        <span class="agenda-time">10:30 – 10:45 AM</span>  <span class="agenda-event">Coffee Break</span>
+    </div>
+    <div class="agenda-item">
+        <span class="agenda-time">10:45 AM – 12:00 PM</span>  <span class="agenda-event">Lectern Session I</span>
+    </div>
+    <div class="agenda-item">
+        <span class="agenda-time">12:00 – 1:30 PM</span>  <span class="agenda-event">Lunch Break</span>
+    </div>
+    <div class="agenda-item">
+        <span class="agenda-time">1:30 – 3:00 PM</span>  <span class="agenda-event">Lectern Session II</span>
+    </div>
+    <div class="agenda-item">
+        <span class="agenda-time">3:00 – 3:15 PM</span>  <span class="agenda-event">Coffee Break</span>
+    </div>
+    <div class="agenda-item">
+        <span class="agenda-time">3:15 – 5:00 PM</span>  <span class="agenda-event">Student Poster Competition</span>
+    </div>
+</div>
+
+    <div class="agenda-day">
+        <h3>Day 3: Saturday, October 19, 2024</h3>
+        <p>Engage in an educational field trip to NASA or Rice University.Tentative time: Depart at 9:00 AM, return by 4:00 PM. </p>
+    </div>
+</section>
+
+   
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Footer Example</title>
+    <style>
+        .contact-banner {
+            background-color: #54585a; /* Applies the specific red color */
+            color: white; /* Ensures text within the footer is white */
+            text-align: center; /* Centers the text within the footer */
+            padding: 2px 0; /* Reduces vertical padding for a thinner appearance */
+            font-size: 1em; /* Sets a standard font size */
+            line-height: 1.2; /* Adjusts the line height to tighten up text spacing */
+            margin: 0; /* Removes any default margin that might be applied */
+        }
+    </style>
+</head>
+<body>
+    <!-- Other content of your website might go here -->
+    <footer class="contact-banner">
+        <p>For additional information or inquiries, please do not hesitate to contact our <a href="mailto:soumyamadireddy727@gmail.com" style="color: white; text-decoration: underline;">team</a>.</p>
+    </footer>
+</body>
+</html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Footer Example</title>
+    <style>
+        .contact-banner {
+            background-color: #54585a; 
+            color: white; /* Ensures text within the footer is white */
+            text-align: center; /* Centers the text within the footer */
+            padding: 1px 0; /* Very thin padding */
+            font-size: 0.9em; /* Slightly smaller font size */
+            line-height: 1; /* Reduced line height for a compact appearance */
+            margin: 0; /* Removes any default margin that might be applied */
+        }
+    </style>
+</head>
+<body>
+    <!-- Other content of your website might go here -->
+    <footer class="contact-banner">
+        <p>For additional information or inquiries, please do not hesitate to contact our <a href="mailto:soumyamadireddy727@gmail.com" style="color: white; text-decoration: underline;">team</a>.</p>
+    </footer>
+</body>
+</html>
+
+
